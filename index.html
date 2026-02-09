@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Prism.js CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Portfolio.</a>
+            <button class="menu-toggle" aria-label="Toggle navigation" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Ashish George</span></h1>
+                <p>BCA Student</p>
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+            </div>
+            <div class="hero-image">
+                <img src="image1.png" alt="Ashish George" class="profile-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>
+                    I am a passionate student developer with a keen interest in building scalable web applications.
+                    I love solving complex problems and learning new technologies. My journey in tech started
+                    with a simple curiosity about how websites work, and it has grown into a full-blown career path.
+                </p>
+                <p>
+                    When I'm not coding, I enjoy exploring new design trends, contributing to open-source projects,
+                    and mentoring fellow students. I believe in writing clean, maintainable code and creating
+                    user-centric experiences.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt skill-icon"></i>
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js skill-icon"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-react skill-icon"></i>
+                    <h3>React</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-node skill-icon"></i>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-git-alt skill-icon"></i>
+                    <h3>Git</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1: Wordle Clone -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Wordle Clone</h3>
+                        <p>A replica of the popular word game built with vanilla JavaScript.</p>
+                        <button class="btn secondary-btn view-code-btn" data-project="wordle">
+                            <i class="fas fa-code"></i> View Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2: Personal Portfolio -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Personal Portfolio</h3>
+                        <p>This responsive website designed to showcase my skills and work.</p>
+                        <button class="btn secondary-btn view-code-btn" data-project="portfolio">
+                            <i class="fas fa-code"></i> View Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3: Movie Discovery App -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Movie Discovery App</h3>
+                        <p>A web app to search and discover movies using the TMDB API.</p>
+                        <button class="btn secondary-btn view-code-btn" data-project="movie">
+                            <i class="fas fa-code"></i> View Code
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Viewer Modal -->
+    <div id="code-viewer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modal-title">Project Code</h3>
+            <pre><code id="modal-code" class="language-javascript">
+                // Code will be injected here
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn" id="submit-btn">Send Message</button>
+                <div id="form-msg" class="form-msg"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Student Portfolio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
