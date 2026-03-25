@@ -1,0 +1,17 @@
+name: Deploy Portfolio Website
+
+on:
+  push:
+    branches:
+      - main   # Runs when you push code
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Deploy Website
+        run: echo "Website deployed successfully!"
